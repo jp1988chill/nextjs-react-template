@@ -1,84 +1,65 @@
-# Next.js 15 Starter
+----------------------------------------------------------- Ejecutar aplicación NextJS Pruebas Unitarias (Por Defecto) ------------------------------------------------------------------ 
+-ng test
 
-Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, TypeScript 5, Tailwind CSS 3 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
+El resultado esperado (Karma v 6.1.1 - connected; test: complete;) se verá en pantalla. 
+Las pruebas incluyen generar registros de Cliente mediante servicios, consultar registros de Cliente mediante servicios. 
+Todo es automático.
 
-## 🚀 What's Included
+----------------------------------------------------------- Ejecutar aplicación NextJS depuración (opcional) ------------------------------------------------------------------
 
-- **Next.js 15 (Stable)**
-- **React 19 (Stable)**
-- **TypeScript 5**
-- **ESLint 9**
-- **Prettier 3**
-- **Tailwind CSS 3**
-- **App Directory**
+////////////////////////////////////////////Instalar NextJS + Entorno desarrollo Web (Navegador Edge) :////////////////////////////////////////////
 
-### 🛠️ ESLint Plugins
+-Instalar VSCode -Instalar NodeJS (carpeta /instalables/node-v22.13.0-x64.msi) [opcional] 
+-Instalar Edge (para ejecutar aplicación mediante VSCode, con depurador) [usar por defecto] 
+-Instalar Chrome (para ejecutar pruebas unitarias)
 
-- [**@eslint/js**](https://www.npmjs.com/package/@eslint/js)
-- [**typescript-eslint**](https://github.com/typescript-eslint/typescript-eslint)
-- [**eslint-plugin-react**](https://github.com/jsx-eslint/eslint-plugin-react)
-- [**@next/eslint-plugin-next**](https://github.com/vercel/next.js)
-- [**eslint-config-prettier**](eslint-config-prettier)
-- [**eslint-plugin-tailwindcss**](https://github.com/francoismassart/eslint-plugin-tailwindcss)
-- [**eslint-plugin-import**](https://github.com/import-js/eslint-plugin-import)
-- [**eslint-plugin-promise**](https://github.com/eslint-community/eslint-plugin-promise)
+VSCode instalar las siguientes extensiones:
 
-### ✨ Prettier Plugins
-
-- [**@trivago/prettier-plugin-sort-imports**](https://github.com/trivago/prettier-plugin-sort-imports)
-- [**prettier-plugin-tailwindcss**](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-
-### 💻 VS Code Extensions (Recommended)
-
-To enhance development experience, install the following VS Code extensions:
-
-- [**Auto Close Tag**](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-- [**Better Comments**](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
-- [**DotENV**](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-- [**EditorConfig for VS Code**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [**formate: CSS/LESS/SCSS formatter**](https://marketplace.visualstudio.com/items?itemName=MikeBovenlander.formate)
-- [**Git History**](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-- [**Import Cost**](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
-- [**JavaScript Booster**](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
-- [**npm Intellisense**](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
-- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp)
-- [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-- [**Turbo Console Log**](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
-- [**Package Json Upgrade**](https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade)
-- [**Visual Studio Code Commitizen Support**](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
-- [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+Angular Extension Pack
+Angular Essentials (Version 13)
+Angular Language Services
+Angular Snippets (Version 13)
+Angular Files
+Microsoft Edge Tools for VS Code
+Prettier - Code formatter
+NextJS Developer Extensions Pack
 
 
-## 🏁 Getting Started
+Luego en VSCode: Ir a Explorer -> Abrir Carpeta -> /nextjs-application
 
-### Prerequisites
+Luego ir a pestaña izquierda de VSCode "Depurar y Ejecutar/Run and Debug", escoger "Web App", borrar todo lo que tiene, y agregar el siguiente JSON dentro de las comillas (sin incluír comillas):
 
-- **Node.js**: Version 20.18.0 or higher
+"
 
-### Installation
+{ "configurations": [ { "type": "vscode-edge-devtools.debug", "request": "launch", "name": "Launch Microsoft Edge and open the Edge DevTools", "url": "http://localhost:4200", "webRoot": "${workspaceFolder}" }, { "type": "pwa-msedge", "name": "Launch Microsoft Edge", "request": "launch", "runtimeArgs": [ "--remote-debugging-port=9222" ], "url": "http://localhost:4200", // Provide your project's url to finish configuring "presentation": { "hidden": true } }, { "type": "pwa-msedge", "name": "Launch Microsoft Edge in headless mode", "request": "launch", "runtimeArgs": [ "--headless", "--remote-debugging-port=9222" ], "url": "http://localhost:4200", "presentation": { "hidden": true } }, { "type": "vscode-edge-devtools.debug", "name": "Open Edge DevTools", "request": "attach", "url": "http://localhost:4200", "presentation": { "hidden": true } } ], "compounds": [ { "name": "Launch Edge Headless and attach DevTools", "configurations": [ "Launch Microsoft Edge in headless mode", "Open Edge DevTools" ] }, { "name": "Launch Edge and attach DevTools", "configurations": [ "Launch Microsoft Edge", "Open Edge DevTools" ] } ] }
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/officiallerio/nextjs-15-starter.git
-    cd nextjs-15-starter
-    ```
+"
 
-2. **Install Dependencies**:
-    ```bash
-    npm install
-    # or with Yarn
-    yarn install
-    ```
+-guardar cambios JSON, y cerrar JSON.
 
-3. **Run Development Server**:
-    ```bash
-    npm run dev
-    # or with Yarn
-    yarn dev
-    ```
+-eliminar carpeta /node_modules si existe en /nextjs-application
 
-4. **Build for Production**:
-    ```bash
-    npm run build
-    ```
+Ahora abrir una línea de comandos (NodeJS Command Prompt), ir a la carpeta /nextjs-application dentro de la línea de comandos (NodeJS Command Prompt), y ejecutar los siguientes comandos:
+npm cache clean --force npm i npm start
+
+Y debería ejecutarse correctamente en : http://localhost:4200
+
+Ahora en VSCode, ir a pestaña izquierda de VSCode "Depurar y Ejecutar/Run and Debug", y seleccionar "Launch Edge and attach DevTools". Ahora se podrá ejecutar la aplicación angular simplemente presionando F5 o botón verde de ícono Play. Una ventana de navegador Edge se ejecutará, y ahora puedes utilizar el VSCode "Explorer" en la pestaña izquierda,para abrir un archivo Angular, agregar puntos de interrupción y depurar la aplicación en tiempo real.
+"
+
+//////////////////////////////////////////// ////////////////////////////////////////////
+
+Nota:
+
+1) El diagrama UML con la arquitectura de la plataforma, se puede visualizar mediante https://app.diagrams.net/?src=about -> Open Existing Diagram y seleccionando el archivo /RestAPISwagger/UML.drawio
+
+2) Opcionalmente, para testear los servicios, se pueden importar las colecciones en Postman (/RestAPISwagger/UnitTestMicroservicios.postman_collection.json), ya que incluyen pruebas con las APIs utilizadas en la plataforma, junto su respectivos JSON. Se debe ejecutar la aplicación C# de servicios REST en segundo plano antes de llamar las APIs desde Postman.
+
+3) Por defecto, se utiliza una base de datos SQL Server local, por ende los string de conexión están parametrizados desde un appsetting y no necesitan ser modificados. De todas maneras, se adjunta el string de conexión necesario para ejecutar la plataforma:
+
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+-
+
+Source from commit:
+https://github.com/officiallerio/nextjs-15-starter/commit/ed2c57655154ba49dbd0e85774f3954488376050
