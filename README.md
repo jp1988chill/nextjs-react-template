@@ -40,7 +40,9 @@ Luego ir a pestaña izquierda de VSCode "Depurar y Ejecutar/Run and Debug", esco
 -eliminar carpeta /node_modules si existe en /nextjs-application
 
 Ahora abrir una línea de comandos (NodeJS Command Prompt), ir a la carpeta /nextjs-application dentro de la línea de comandos (NodeJS Command Prompt), y ejecutar los siguientes comandos:
-npm cache clean --force npm i npm start
+npm cache clean --force
+npm i
+npm start
 
 Y debería ejecutarse correctamente en : http://localhost:4200
 
