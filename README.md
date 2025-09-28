@@ -1,3 +1,7 @@
+Note: This repo is meant to have a stock Next.JS + React + VS Code debugger codebase, for projects that will eventually require it.
+
+-
+
 Stable: Windows 10 x64 / Windows 11 x64
 
 Setup:
