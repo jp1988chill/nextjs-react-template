@@ -1,7 +1,7 @@
 Stable: Windows 10 x64 / Windows 11 x64
 
 Setup:
--Install Microsoft Edge
+-Install Chrome
 -Install NodeJS: https://nodejs.org/en/download (x64 .msi LTS), check "Automatically install the necessary tools. ...", & next to everything.
 -Install VSCode 
 -Install these VSCode extensions:
@@ -20,15 +20,12 @@ Now open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & run t
 -npm cache clean --force 
 -npm i --force
 
-Run Development Server:
--npm run dev
-
 Build for Production:
 -npm run build
 
 Close VSCode terminal.
 
-(Default) Open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & Run: -cd my-app -npm run-script dev
+(Default) Open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & Run: -cd my-app -npm run dev
 
 (Optional, Unit test) Open VSCode, Open Folder: /my-app, click on Terminal -> New Terminal & Run: -cd my-app -npm test
 

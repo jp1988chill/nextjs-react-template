@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "858ec6ff45a3d13e8203245765870fe6",
-    "previewModeSigningKey": "aad6359a005af4f84d49f23d14d2887f248108cad99693fcf58c04714a7a4124",
-    "previewModeEncryptionKey": "c2aee549ea5676529137dc6071dceddeec76e8b83a1acb4de4c4d9debc758f3c"
-  }
-}
+{"version":4,"routes":{"/en":{},"/fr":{},"/en/portfolio":{},"/fr/portfolio":{},"/en/portfolio/0":{},"/en/portfolio/1":{},"/en/portfolio/2":{},"/en/portfolio/3":{},"/en/portfolio/4":{},"/en/portfolio/5":{},"/fr/portfolio/0":{},"/fr/portfolio/1":{},"/fr/portfolio/2":{},"/fr/portfolio/3":{},"/fr/portfolio/4":{},"/fr/portfolio/5":{}},"dynamicRoutes":{"/[locale]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[locale]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[locale]/portfolio":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[locale]/portfolio","routeRegex":"^\\/([^/]+?)\\/portfolio(?:\\/)?$","allowHeader":[]},"/[locale]/portfolio/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[locale]/portfolio/[slug]","routeRegex":"^\\/([^/]+?)\\/portfolio\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"1105b7f699c0e194363d0d7d6ab6475a","previewModeSigningKey":"1196ea77cd21b76dbf924fb59c20b19eb72f4f8584b9c33dff269241cddfe2c5","previewModeEncryptionKey":"eb4689feb74047deb327fb6c276ef6282ed8206acb95bebf820db297f025666f"}}
